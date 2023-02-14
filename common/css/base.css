@@ -59,3 +59,18 @@ i {
 li {
     cursor: pointer;
 }
+
+/* 滚动条有话 */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ddd9cf;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #b3aa94;
+    border-radius: 100px;
+}

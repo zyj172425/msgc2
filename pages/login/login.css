@@ -11,7 +11,7 @@
 #body > .banner > p {
   position: absolute;
   top: 20%;
-  left: 50%;
+  left: 43%;
   transform: translate(-50%, -50%);
   color: #fff;
   font-size: 32px;
@@ -19,8 +19,8 @@
 }
 #body > .banner > div {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 36%;
+  top: 30%;
   transform: translate(-50%, -50%);
   width: 500px;
   height: 280px;

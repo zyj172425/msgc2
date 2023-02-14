@@ -30,4 +30,10 @@ $(function () {
             $(this).next().click()
         }
     })
+    setInterval(() => {
+        $('#logo').addClass('animate__rubberBand')
+    }, 4000)
+    $('#logo').on('animationend', function () {
+        $(this).removeClass('animate__rubberBand')
+    })
 })
