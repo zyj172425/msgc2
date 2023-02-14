@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="referrer" content="no-referrer">
+    <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css">
+    <style>
+        .swiper {
+            --swiper-theme-color: #fff;
+            ;
+            /* 设置Swiper风格 */
+            --swiper-navigation-color: pink;
+            /* 单独设置按钮颜色 */
+            --swiper-navigation-size: 60px;
+        }
+
+        .swiper-pagination-bullet {
+            display: inline-block !important;
+            width: 20px;
+            height: 20px;
+            margin: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 第三方是生产力工具 -->
+    <!-- 这里的class是固定的不能修改 -->
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img
+                    src="https://pic.qyer.com/public/home/focus/2023/02/05/16755731347809?imageMogr2/interlace/1|imageslim"
+                    alt=""></div>
+            <div class="swiper-slide"><img
+                    src="https://pic.qyer.com/public/home/focus/2023/02/05/16755730231406?imageMogr2/interlace/1|imageslim"
+                    alt=""></div>
+            <div class="swiper-slide"><img
+                    src="https://pic.qyer.com/public/home/focus/2023/02/05/16755731347809?imageMogr2/interlace/1|imageslim"
+                    alt=""></div>
+            <!-- <div class="swiper-slide"><img
+                    src="https://pic.qyer.com/public/home/focus/2023/02/06/16756739975583?imageMogr2/interlace/1|imageslim"
+                    alt="">
+            </div> -->
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
+    <script>
+        //初始化swiper
+        var mySwiper = new Swiper('.swiper', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }, loop: true,
+            //精确配置
+            autoplay: {
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                //个性化配置样式
+            },
+        })
+
+    </script>
+</body>
+
+</html>

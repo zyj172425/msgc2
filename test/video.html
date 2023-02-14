@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 预加载:预先加载视频,用户在没有播放视频之前 提前加载视频内容 -->
+    <!-- 一旦页面上有多个视频,如果开启预加载,会浪费大量的流量 -->
+    <!-- preload:是否开启预加载
+    --AUTO:开启预加载
+    --none:不开启预加载
+    --metadata:元数据;仅加载视频的相关信息,但是不加载视频的本地内容
+    -->
+    <video src="./assets/video/11.mp4" controls preload="metadata" autoplay></video>
+</body>
+
+</html>

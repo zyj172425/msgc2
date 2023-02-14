@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="inp1">
+    <p id="p1"></p>
+    <script>
+        //默认设定 :仅替换 第一个找到的元素
+        var words = 'AA BB CC DD AA BB CC DD aa bb cc dd'
+        inp1.oninput = function () {
+            console.log(this.value)
+            var re = new RegExp(`(${this.value})`, 'gi')
+            console.log(re)
+            var res = words.replace(re, `<span style='color:red;'>$1</span>`)
+            p1.innerHTML = res
+        }
+        //如何通过变量 动态生成 正则表达式
+        //1.字面量语法 /正则/ ->适合固定的
+        //2.构造语法 new RegExp(正则,修饰符)
+
+        var res = words.replace('AA', '呵呵')
+        console.log(res)
+        //全局替换,需要正则表达式
+        //格式/正则表达式/修饰符
+        //修饰符: g - 全局; i - 忽略大小写
+        var res = words.replace(/AA/gi, '呵呵')
+        console.log(res)
+        //正则的捕获组: ()
+        var phone = '15641341521'
+        // \d代表一个数字 {n}:代表连续n个
+        var re1 = /(\d{3})(\d{4})(\d{4})/
+        var res = phone.replace(re1, '$1-$2-$3')
+        // $n :第n个小括号中的正则表达式 匹配到的具体字符
+        console.log(res)
+    </script>
+</body>
+
+</html>

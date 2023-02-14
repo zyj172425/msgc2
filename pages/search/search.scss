@@ -1,0 +1,99 @@
+#body{
+    background-color: #f7f7f7;
+        
+    
+    >div{
+        width: var(--width);
+        margin: 0 auto;
+        // position: relative;
+        >ul.order{
+            margin-bottom: 4px;
+            >li{
+                cursor: pointer;
+                margin: 0 8px 8px 0;
+            }
+            li.active{
+                color: orange;
+            }
+        }
+        >.list{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            
+            >li{
+                display: flex;
+                overflow: hidden;
+                margin:0 10px 10px 0;
+                background-color: white;
+                position: relative;
+                border-radius: 8px;
+                padding: 0;
+                box-shadow: 0 0 2px 2px rgba($color: #000000, $alpha: .1);
+                img{
+                    width: 130px;
+                    height: 130px;
+                }
+                >.text{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    margin: 8px 0 8px 10px;
+                    h3{
+                        font-weight: 900;
+                    }
+                    
+                    >span{
+                        font-weight: bold;
+                        color: var(--color-primary);
+                        font-size: 20px;
+                    }
+                }
+            }
+            }
+        .pages{
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            margin: 20px 0;
+            height: 36px;
+            button{
+                width: 66px;
+                height: 36px;
+                margin: 0 5px;
+                background-color: #fff;
+                color: #333;
+                background-color: #fff;
+                border: 1px solid #000;
+                border-radius: 5px;
+                cursor: pointer;
+                &:active{
+                    background-color: orange;
+                    color: #f7f7f7;
+                }
+            }
+            ul{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 4px;
+                li{ 
+                    width: 36px;
+                    height: 36px;
+                    margin: 0 4px;
+                    padding: 8px;
+                    border-radius: 5px;
+                    border: 1px solid #000;
+                    color: #000;
+                    text-align: center;
+                    cursor: pointer;
+                    &.active{
+                        background-color: orange;
+                        color: #f7f7f7;
+                    }
+                }
+                
+            }
+        }
+        }
+}

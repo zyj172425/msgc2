@@ -1,0 +1,24 @@
+#footer{
+    background-color: black;
+    min-width: var(--width);
+    display: flex;
+    justify-content: center;
+    >div{
+        width: var(--width);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 0;
+        a,p{
+            color: #fff;
+        }
+        a{
+            margin: 5px;
+        }
+        p{
+            margin-top: 5px;
+            font-size: 12px;
+        }
+    }
+}

@@ -1,0 +1,99 @@
+#body{
+    // background-color: #fae8c8;
+    >div{
+        width: var(--width);
+        margin: 0 auto;
+        // position: relative;
+        >.list{
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            li{ 
+                display: flex;
+                position: absolute;
+                width: calc((100% - 30px) / 4);
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: left;
+                // white-space: nowrap;
+                overflow: hidden;
+                margin:0 10px 10px 0;
+                background-color: white;
+                border-radius: 8px;
+                padding: 0;
+                transition: .2s linear;
+                cursor: pointer;
+                
+                .img{
+                    width: 100%;
+                    // height: 250px;
+                    overflow: hidden;
+                    >img{
+                        width: 100%;
+                        // height: 100%;
+                        transition: .2s;
+                    }
+                }
+                &:hover{
+                    box-shadow: 0 0 4px 4px rgba($color: #000000, $alpha: .2);
+                    .img>img:hover{
+                        transform: scale(1.1);
+                    }
+                }
+                >.text{
+                    display: flex;
+                    flex-direction: column;
+                    // position: relative;
+                    padding: 6px;
+                    justify-content: space-between;
+                    height: 92px;
+                    >div{
+                        display: flex;
+                        margin-top: 14px;
+                        justify-content: space-between;
+                        >.left{
+                            display: flex;
+                            justify-content: center;
+                            
+                            img{
+                                width: 24px;
+                                height: 24px;
+                                border-radius: 50%; 
+                                margin-right: 4px;
+                            }
+                        }
+                    }
+                }
+
+             }
+             >li:nth-child(4n){
+                margin-right: 0;
+             }
+        }
+        .loadmore,.nomore{
+            font-size: 22px;
+            color: #555;
+            text-align: center;
+            padding: 8px;
+        }
+        .nomore{
+            display: none;
+        }
+        .backtop{
+            display: flex;
+            position: fixed;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            bottom: 40px;
+            right: 30px;
+            width: 80px;
+            height: 80px;
+            border: 1px solid #333;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            display: none;
+        }
+    }
+}

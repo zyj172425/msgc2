@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css">
+</head>
+
+<body>
+    <script>
+
+        var a;
+        console.log(a); //undefined
+        var a = 12;
+        function fn() {
+            // EC(FN)
+            //  作用域链:<EC(FN),EC(G)>
+            //  形参赋值：--
+            //  变量提升: var a;
+            console.log(a); //undefind
+            var a = 13;
+        }
+        fn();
+        console.log(a); // 12
+
+
+        // 题2
+        // EC(G)
+        //  变量提升；
+        var a;
+        console.log(a);  //undefined
+        var a = 12;
+        function fn() {
+            // EC(FN)
+            //  作用域链:<EC(FN),EC(G)>
+            //  形参赋值：--
+            //  变量提升: --
+            console.log(a);//->不是自己的私有变量，是EC(G)中的全局变量 12
+            a = 13;
+        }
+        fn();
+        console.log(a); //->13
+
+
+
+        // EC(G)
+        //  变量提升；
+        //     fn=0x000;[[scope]:EC(G)]
+        console.log(a); //->Uncaught ReferenceError: a is not defined
+        a = 12;
+        function fn() {
+            console.log(a);
+            a = 13;
+        }
+        fn();
+
+    </script>
+</body>
+
+</html>

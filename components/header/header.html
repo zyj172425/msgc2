@@ -1,0 +1,22 @@
+<div class="container">
+    <img src="./assets/img/logo.png" alt="">
+    <div class="search">
+        <input type="text" placeholder="菜谱名,食材名">
+        <button>搜索</button>
+    </div>
+    <ul>
+        <!-- 路径参数:根据路径的变化,局部加载不同的页面 -->
+        <!-- 路径参数:?p=页面名 -->
+        <li><a href="?p=home">首页</a></li>
+        <li><a href="?p=video">视频菜谱</a></li>
+        <li><a href="?p=note">笔记</a></li>
+        <li><a href="?p=mall">商城</a></li>
+        <li><a href="?p=live">直播</a></li>
+    </ul>
+    <a href="?p=login">登录</a>
+    <!-- 用户登录后的信息展示 -->
+    <div class="user">
+        <img src="../../assets/img/user_unknown.png" alt="">
+        <a href="?p=profile">名字</a>
+    </div>
+</div>

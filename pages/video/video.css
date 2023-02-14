@@ -1,0 +1,96 @@
+#body {
+  background-color: #fae8c8;
+}
+#body > .container {
+  width: var(--width);
+  margin: 0 auto;
+  position: relative;
+}
+#body > .container .list {
+  display: flex;
+  flex-wrap: wrap;
+}
+#body > .container .list li {
+  display: flex;
+  width: calc((100% - 20px) / 3);
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0 10px 10px 0;
+  background-color: white;
+  position: relative;
+  border-radius: 8px;
+  padding: 0;
+  transition: 0.2s linear;
+}
+#body > .container .list li:hover {
+  box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+#body > .container .list li:hover img {
+  transform: scale(1.1);
+}
+#body > .container .list li .img {
+  position: relative;
+  overflow: hidden;
+}
+#body > .container .list li .img img {
+  width: 100%;
+  display: block;
+  transition: 0.2s;
+}
+#body > .container .list li .img .text {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 5px;
+  color: #fff;
+}
+#body > .container .list li .title span {
+  display: inline-block;
+  padding: 10px;
+  padding-bottom: 20px;
+}
+#body > .container .list > li:nth-child(3n) {
+  margin-right: 0;
+}
+#body > .container .pages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  cursor: pointer;
+}
+#body > .container .pages button {
+  width: 60px;
+  height: 36px;
+  margin: 0 5px;
+  background-color: #fff;
+  color: #333;
+}
+#body > .container .pages button:active {
+  background-color: orange;
+  color: white;
+  opacity: 0.8;
+}
+#body > .container .pages ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#body > .container .pages ul li {
+  width: 36px;
+  height: 36px;
+  padding: 8px;
+  margin: 3px;
+  background-color: #fff;
+  text-align: center;
+}
+#body > .container .pages ul li.active {
+  background-color: orange;
+  color: #fff;
+}/*# sourceMappingURL=video.css.map */

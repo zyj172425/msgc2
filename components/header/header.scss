@@ -1,0 +1,85 @@
+#header {
+    background-color: #f75148;
+    min-width: var(--width);
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+
+    >.container {
+        width: var(--width);
+        display: flex;
+        height: 80px;
+        align-items: center;
+
+        >img {
+            height: 60px;
+        }
+
+        >.search {
+            display: flex;
+            margin-left: 20px;
+            border-radius: 100px;
+            //圆角矩形超过高度
+            // border: 2px solid white;
+            background-color: white;
+            padding: 2px;
+
+            >input {
+                width: 160px;
+                padding: 6px 13px;
+                font-size: 18px;
+                background-color: transparent;
+            }
+
+            >button {
+                border-radius: 100px;
+                padding: 0 12px;
+            }
+        }
+
+        >ul {
+            display: flex;
+            margin-left: 20px;
+
+            // height: 100px;
+            >li {
+                height: 80px;
+                line-height: 80px;
+
+                >a {
+                    display: inline-block;
+                    padding: 0 15px;
+                    color: white;
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+            }
+
+            a.active {
+                background-color: #f8625b;
+            }
+
+            a:hover {
+                background-color: #f8625b;
+            }
+        }
+
+        >a {
+            color: white;
+            margin-left: auto;
+        }
+
+        >.user {
+            margin-left: auto;
+            color: #fff;
+            display: flex;
+            align-items: center;
+
+            >img {
+                width: 40px;
+            }
+        }
+    }
+}

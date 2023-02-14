@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./font_3887158_eu4m8rdqtp/iconfont.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        ul {
+            display: flex;
+            width: 100%;
+            list-style: none;
+            margin-top: 100px;
+        }
+
+        li {
+            width: calc((1000px - 20px)/4);
+            height: 500px;
+            margin: 0 10px;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+
+            filter: blur(2px);
+            transition: .2s;
+        }
+
+        li>video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        li.active {
+            filter: blur(0);
+            width: 400px;
+            /* height: 100%; */
+        }
+
+
+
+        li.noactive {
+            width: calc((100% - 400px -30px) / 3);
+        }
+
+        span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%);
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <ul>
+            <li>
+                <video src="./assets/video/11.mp4" preload="metadata"></video>
+
+            </li>
+            <li>
+                <video src="./assets/video/22.mp4" preload="metadata"></video>
+
+
+            </li>
+            <li>
+                <video src="./assets/video/33.mp4" preload="metadata"></video>
+
+
+
+            </li>
+            <li>
+                <video src="./assets/video/44.mp4" preload="metadata"></video>
+
+
+            </li>
+        </ul>
+    </div>
+    <script src="./jquery-3.6.3.min.js"></script>
+    <script>
+        $('ul>li').click(function () {
+            if ($(this).hasClass('active')) {
+                $(this).removeClass('active').children().trigger('pause')
+                $(this).siblings().removeClass('noactive')
+            } else {
+                $(this).addClass('active').removeClass('noactive').siblings().addClass('noactive').removeClass('active')
+                //去掉其他元素的激活,保证同一时间只有一个元素处于激活状态
+
+                $(this).children().trigger('play')
+                $(this).siblings().children().trigger('pause')
+            }
+
+        })
+    </script>
+</body>
+
+</html>

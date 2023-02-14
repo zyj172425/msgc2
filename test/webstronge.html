@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 我们的网页在一些场景中,需要在浏览器中存储一些持久化的数据
+     -- 数据库/文件系统就属于最常见的持久化技术
+    -->
+    <!-- webstrage提供了两种存储空间
+    - 本地(local)
+    - 会话(session):代表短暂存储,即网页开启的这段时间
+    -->
+    <script>
+        localStorage.setItem('uname', 'kaige')
+        sessionStorage.setItem('age', 18)
+        sessionStorage.setItem('tag', ['楼长', 'asdhu'])
+        var stu = { sname: '大改版机', age: 33, phone: 241452 }
+        sessionStorage.setItem('stu', JSON.stringify(stu))
+        var stu1 = sessionStorage.getItem('stu')
+        console.log(JSON.parse(stu1))
+        console.log(stu1)
+    </script>
+</body>
+
+</html>

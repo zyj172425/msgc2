@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="./assets/img/logo.png">
+</head>
+
+<body>
+    <video src="./assets/video/11.mp4" height="400"></video>
+    <script src="./jquery-3.6.3.min.js"></script>
+    <script>
+        $('video').mouseover(function () {
+            console.dir(this)
+            this.play()
+            //jquery 仅封装了一些常见的时间和方法,没有封装的 需要通用方式触发
+            //trigger('方法名'):trigger:触发
+        })
+        $('video').mouseout(function () {
+            // this.pause()
+            $(this).trigger('pause');
+        })
+    </script>
+</body>
+
+</html>

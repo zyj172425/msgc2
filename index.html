@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美食广场</title>
+    <link rel="icon" href="./assets/img/favicon.ico">
+    <!-- 通用样式 -->
+    <link rel="stylesheet" href="./common/css/reset.css">
+    <link rel="stylesheet" href="./common/css/base.css">
+    <link rel="stylesheet" href="./common/css/font_3886869_4ca2z0myytw/iconfont.css">
+    <link rel="stylesheet" href="../../node_modules/swiper/swiper-bundle.min.css">
+    <script src="../../node_modules/swiper/swiper-bundle.min.js"></script>
+    <!-- 特定样式 -->
+
+    <link rel="stylesheet" href="./components/header/header.css">
+    <link rel="stylesheet" href="./components/footer/footer.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header"></div>
+    <div id="body"></div>
+    <div id="footer"></div>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+        const params = new URLSearchParams(location.search)
+        const p = params.get('p') || 'home'
+        $('#header').load('./components/header/header.html', function () {
+            var s = document.createElement('script')
+            // console.log(sc)
+            s.src = './components/header/header.js'
+            $('body').append(s)
+        })
+        $('#footer').load('./components/footer/footer.html')
+        //路由系统:
+        //读取路径中的参数p的值,然后拼接出对应页面路径
+        //利用load方法加载到#body元素里面
+        //需求难度:点击不同的超链接,切换#body中显示的页面
+        // 读取路径中参数的p值
+
+        //加载页面到#body中
+        //利用拼接,加载不同的页面
+        //根据不同的 路径参数,局部切换不同的页面
+        $('#body').load(`./pages/${p}/${p}.html`, function () {
+            //加载css
+
+            $('head').append(`<link rel="stylesheet" href="./pages/${p}/${p}.css">`)
+            //加载js
+
+            const sc = document.createElement('script')
+            console.log(sc)
+            sc.src = `./pages/${p}/${p}.js`
+            $('body').append(sc)
+
+        })
+        //不能通过字符串添加脚本的引入,会把< /script>错认为是结尾标签
+        // $('body').append(`<sc src="./pages/${p}/${p}.js"></sc>`)
+        //通过js代码创建一个脚本元素
+
+
+    </script>
+</body>
+
+</html>
