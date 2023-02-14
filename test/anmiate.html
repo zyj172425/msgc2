@@ -16,7 +16,13 @@
     <script src="../jquery-3.6.3.min.js"></script>
     <script>
         $('img').click(function () {
-            $(this).addClass('animate__zoomOut')
+            $(this).addClass(' animate__zoomOut')
+        })
+        //新的时间: animationed 当元素上的 关键帧动画 执行结束后出发
+        // 思路: 当元素上的关键帧动画结束时,立刻删除动画类
+        //on :万能的时间监听方式,常用于委托操作; 也可以绑定一些非常见事件
+        $('img').on('animationend', function () {
+            $(this).removeClass('animate__heartBeat')
         })
     </script>
 </body>
