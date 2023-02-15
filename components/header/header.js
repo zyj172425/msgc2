@@ -5,6 +5,7 @@ $(function () {
     user = JSON.parse(user)
     console.log(user)
     if (user) {
+        $('.user>img').prop('src', user.avatar)
         $('.user').show()
         $('.user').prev().hide()
         $('.user>a').html(user.phone)

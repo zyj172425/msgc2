@@ -65,5 +65,6 @@
   align-items: center;
 }
 #header > .container > .user > img {
-  width: 40px;
+  width: 60px;
+  border-radius: 50%;
 }/*# sourceMappingURL=header.css.map */

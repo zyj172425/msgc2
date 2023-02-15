@@ -31,24 +31,24 @@
   margin-bottom: 20px;
   font-size: 32px;
 }
-#body > .container > div > .left ul {
+#body > .container > div > .left > ul {
   display: flex;
   flex-direction: column;
   align-items: left;
   justify-content: flex-start;
   font-size: 20px;
 }
-#body > .container > div > .left ul li {
+#body > .container > div > .left > ul > li {
   padding: 8px;
   margin: 2px;
   margin-left: 20px;
 }
-#body > .container > div > .left ul li.active {
+#body > .container > div > .left > ul > li.active {
   color: var(--color-primary);
 }
 #body > .container > div > .right {
   width: 75%;
-  height: 420px;
+  min-height: 420px;
   background-color: #fff;
   border-radius: 8px;
   display: flex;
@@ -68,21 +68,46 @@
 #body > .container > div > .right .main {
   width: 91%;
 }
-#body > .container > div > .right .main li {
+#body > .container > div > .right .main > li {
   display: none;
 }
-#body > .container > div > .right .main li table {
+#body > .container > div > .right .main > li > ul {
+  display: flex;
+  height: 400px;
+  overflow: scroll;
+}
+#body > .container > div > .right .main > li > ul > li {
+  width: 70px;
+  height: 70px;
+  margin: 0 10px 10px 0;
+  cursor: pointer;
+}
+#body > .container > div > .right .main > li > ul > li img {
+  width: 100%;
+}
+#body > .container > div > .right .main > li > img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+#body > .container > div > .right .main > li > #qd {
+  width: 100px;
+  height: 40px;
+  border-radius: 4px;
+  margin: 8px 0 5px 0;
+}
+#body > .container > div > .right .main > li table {
   width: 668px;
   border-collapse: collapse;
 }
-#body > .container > div > .right .main li table td {
+#body > .container > div > .right .main > li table td {
   width: 120px;
   height: 20px;
   padding: 0 30px 3px 0;
   font-size: 18px;
   border-bottom: 1px dashed gray;
 }
-#body > .container > div > .right .main li button {
+#body > .container > div > .right .main > li > #tc {
   width: 160px;
   height: 45px;
   border-radius: 6px;

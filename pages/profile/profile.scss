@@ -35,14 +35,14 @@
                     font-size: 32px;
                 }
 
-                ul {
+                >ul {
                     display: flex;
                     flex-direction: column;
                     align-items: left;
                     justify-content: flex-start;
                     font-size: 20px;
 
-                    li {
+                    >li {
                         padding: 8px;
                         // margin: px 0;
                         margin: 2px;
@@ -57,7 +57,7 @@
 
             >.right {
                 width: 75%;
-                height: 420px;
+                min-height: 420px;
                 background-color: #fff;
                 border-radius: 8px;
                 display: flex;
@@ -78,8 +78,38 @@
                 .main {
                     width: 91%;
 
-                    li {
+                    >li {
                         display: none;
+
+                        >ul {
+                            display: flex;
+                            height: 400px;
+                            overflow: scroll;
+
+                            >li {
+                                width: 70px;
+                                height: 70px;
+                                margin: 0 10px 10px 0;
+                                cursor: pointer;
+
+                                img {
+                                    width: 100%;
+                                }
+                            }
+                        }
+
+                        >img {
+                            width: 80px;
+                            height: 80px;
+                            border-radius: 50%;
+                        }
+
+                        >#qd {
+                            width: 100px;
+                            height: 40px;
+                            border-radius: 4px;
+                            margin: 8px 0 5px 0;
+                        }
 
                         table {
                             width: 668px;
@@ -94,7 +124,7 @@
                             }
                         }
 
-                        button {
+                        >#tc {
                             width: 160px;
                             height: 45px;
                             border-radius: 6px;

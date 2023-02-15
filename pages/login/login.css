@@ -50,7 +50,7 @@
   display: flex;
   justify-content: space-between;
 }
-#body > .banner > div button {
+#body > .banner > div > div button {
   width: 150px;
   height: 40px;
   border-radius: 100px;
